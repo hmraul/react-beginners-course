@@ -1,0 +1,14 @@
+<div id="mainDiv"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+<script type="text/javascript">
+const rootElement = document.getElementById('mainDiv')
+const element = React.createElement('div',
+{
+    className: 'container',
+    children: ['Hello world','Goodbye']
+})
+console.log(element)
+ReactDOM.render(element, rootElement)
+</script>

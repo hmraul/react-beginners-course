@@ -1,0 +1,18 @@
+<div id="mainDiv"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+<script type="text/babel">
+const rootElement = document.getElementById('mainDiv')
+
+const Message = (props) => <div>{props.msg}</div>
+
+const element = (
+    <div className="container">
+        <Message msg='Hello world' />
+        <Message msg='Goodbye world' />
+    </div>
+)
+
+ReactDOM.render(element, rootElement)
+</script>

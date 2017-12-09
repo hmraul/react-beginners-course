@@ -1,0 +1,39 @@
+<div id="mainDiv"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+<script type="text/babel">
+const rootElement = document.getElementById('mainDiv')
+
+const helloWorld = <div>Hello world</div>
+const message = (props) => <div>{props.msg}</div>
+const Message = (props) => <div>{props.msg}</div>
+
+const prev_element = (
+    <div className="container">
+        {message({msg:'Hello world'})}
+        {message({msg:'Goodbye world'})}
+    </div> 
+)
+
+const element = (
+    <div className="container">
+        <Message msg='Hello world' />
+        <Message msg='Goodbye world' />
+        {React.createElement(message, {msg:'Hello world'})}
+        {React.createElement(message, {msg:'Goodbye world'})}        
+    </div>
+)
+
+
+
+const content = 'Hello world'
+const myClassName = 'container'
+
+const props = {
+    className: 'container',
+    children: 'Hello world',
+}
+
+ReactDOM.render(element, rootElement)
+</script>
